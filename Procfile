@@ -1,0 +1,1 @@
+web: gunicorn django_template.wsgi --preload --log-file -

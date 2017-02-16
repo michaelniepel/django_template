@@ -1,0 +1,10 @@
+Django==1.10.5
+djangorestframework==3.5.4
+psycopg2==2.6.2
+django-allauth==0.30.0
+dj-database-url==0.4.2
+django-crispy-forms==1.6.1
+django-model-utils==2.6.1
+python-decouple==3.0
+django-storages==1.5.2
+boto==2.45.0
