@@ -43,6 +43,7 @@ $ heroku config:set SECRET_KEY=<secret_key>
 $ heroku addons:create papertrail:choklad
 $ heroku addons:create heroku-postgresql:hobby-dev
 $ git push heroku master
+$ python manage.py collectstatic --settings django_template.settings.production
 ```
 
 ## Run commands, e.g. migrate
