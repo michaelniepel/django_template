@@ -7,12 +7,14 @@ from .base import *
 
 DEBUG = False
 ALLOWED_HOSTS = ('django_template.herokuapp.com',)
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_DEFAULT_REGION = config('AWS_DEFAULT_REGION')
+AWS_S3_HOST = config('AWS_S3_HOST')
+AWS_S3_CUSTOM_DOMAIN = '%s/%s' % (AWS_S3_HOST, AWS_STORAGE_BUCKET_NAME)
 AWS_PRELOAD_METADATA = True
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
